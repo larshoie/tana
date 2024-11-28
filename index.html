@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/styles.scss" />
   </head>
   <body>
-    <div id="typewriter"></div>
+  
+    <div id="hero-container">
 
-    <script type="module" src="src/app.js"></script>
+      <button class="clickable">⦿</button>
+      <div class="word">Walk </div>
+      <div class="word">and </div>
+      <div class="word">work </div>
+    
+      <video src="https://tana.inc/promo_video_2.mp4" loop muted class="video"></video>
+    
+      <button class="clickable">⦿</button>
+      <div class="word">Contribute</div>
+      <div class="word">more</div>
+      <div class="word">by</div>
+      <div class="word">typing</div>
+      <div class="word">less</div>
+    
+      <video src="https://tana.inc/promo_video_2.mp4" loop muted class="video"></video>
+    
+      <button class="clickable">⦿</button>
+      <div class="word">ChatGPT</div>
+      <div class="word">with</div>
+      <div class="word">benefits</div>
+    
+      <video src="https://tana.inc/promo_video_2.mp4" loop muted class="video"></video>
+
+    </div>
+    
+
+    <script src="src/vanilla.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+      const animation = new LLMHeroAnimation({
+          container: document.getElementById('hero-container'),
+          speed: 100, // 1 second per element
+          pauseDuration: 10000, // 2-second pause at the end of the sequence
+          autoplay: true
+      });
+
+    });
+    </script>
   </body>
 </html>
